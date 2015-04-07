@@ -1,0 +1,9 @@
+# Directory hopping
+alias ..="cd .."
+alias home="cd ~"
+
+# Output IP address
+alias localip="ipconfig getifaddr en0"
+
+# Increase open file limit
+alias ulimit10="ulimit -n 10000"
