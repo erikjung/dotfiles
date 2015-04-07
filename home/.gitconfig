@@ -109,3 +109,8 @@
 [credential]
 
   helper = /opt/boxen/bin/boxen-git-credential
+
+[filter "hawser"]
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
