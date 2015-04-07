@@ -104,3 +104,22 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
+
+for app in "Activity Monitor" \
+  "cfprefsd" \
+  "Dock" \
+  "Finder" \
+  "Google Chrome" \
+  "Google Chrome Canary" \
+  "Safari" \
+  "SystemUIServer" \
+  "Terminal";
+do
+	killall "${app}" > /dev/null 2>&1
+done
+
+echo "OSX configured. Note that some of these changes require a restart to take effect."
