@@ -1,7 +1,13 @@
 [alias]
 
   # View abbreviated SHA, description, and history graph of the latest 20 commits
-  logg = log --pretty=oneline -n 20 --graph --abbrev-commit
+  # Example: "* 49c65fa Increase dock icon size in OSX config"
+  log1 = log --pretty=oneline --graph --abbrev-commit
+
+  # View simple change log with date and commit subject
+  # https://www.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats
+  # Example: "2015-04-07 Revise Directory Structure section"
+  log2 = log --pretty=format:'%cd %s' --date=short --no-merges
 
   # Pull in remote changes for the current repository and all its submodules
   pullall = !"git pull; git submodule foreach git pull origin master"
@@ -115,3 +121,8 @@
   clean = git hawser clean %f
   smudge = git hawser smudge %f
   required = true
+  
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
