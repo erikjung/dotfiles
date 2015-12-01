@@ -30,8 +30,7 @@
 
 [core]
 
-  # Use custom `.gitignore` and `.gitattributes`
-  excludesfile = /opt/boxen/config/git/gitignore
+  # Use custom `.gitattributes`
   attributesfile = ~/.gitattributes
 
   # Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -77,13 +76,6 @@
   # Automatically correct and execute mistyped commands
   autocorrect = 1
 
-[push]
-
-  # Use the Git 1.x.x default to avoid errors on machines with old Git
-  # installations. To use `simple` instead, add this to your `~/.extra` file:
-  # `git config --global push.default simple`. See http://git.io/mMah-w.
-  default = matching
-
 [url "git@github.com:"]
 
   insteadOf = "gh:"
@@ -104,25 +96,6 @@
 
   insteadOf = "gist:"
 
-[user]
-
-  name = Erik Jung
-  email = erikdavidjung@gmail.com
-
 [hub]
 
   protocol = https
-
-[credential]
-
-  helper = /opt/boxen/bin/boxen-git-credential
-
-[filter "hawser"]
-  clean = git hawser clean %f
-  smudge = git hawser smudge %f
-  required = true
-  
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
