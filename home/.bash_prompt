@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Get current Git branch
 # github.com/mdo/config/blob/master/.bash_profile
 function parse_git_branch () {
