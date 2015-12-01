@@ -33,12 +33,6 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 ## Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF).
 defaults write com.apple.screencapture type -string "png"
 
-## Enable subpixel font rendering on non-Apple LCDs.
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-## Enable HiDPI display modes (requires restart).
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
 # Finder
 
 # Allow quitting via ⌘ + Q; doing so will also hide desktop icons.
@@ -69,9 +63,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 ## Use list view in Finder by default (other options: icnv, clmv, Flwv).
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-## Show the ~/Library folder.
-chflags nohidden ~/Library
 
 # Dock and Dashboard
 
