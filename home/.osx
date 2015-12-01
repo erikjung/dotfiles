@@ -122,4 +122,4 @@ do
 	killall "${app}" > /dev/null 2>&1
 done
 
-echo "OSX configured. Note that some of these changes require a restart to take effect."
+echo "OSX configured. Some of these changes require a restart to take effect."
