@@ -1,9 +1,11 @@
-# Directory hopping
-alias ..="cd .."
-alias home="cd ~"
+#!/bin/bash
 
-# Output IP address
-alias localip="ipconfig getifaddr en0"
+# Traverse up parent directories.
+alias ..="cd ../"
+alias ...="cd ../../"
 
-# Increase open file limit
-alias ulimit10="ulimit -n 10000"
+# Output the most relevent IP address.
+alias ipaddress="ipconfig getifaddr en0"
+
+# Increase the open file limit.
+alias ulimitup="ulimit -n 10000"
